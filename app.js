@@ -36,7 +36,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error',{title: 'Three BMW'});
+  res.render('error',{title: 'BMW'});
 
   //res.render('error);
   //res.render('error',{title: 'Three BMW'});
