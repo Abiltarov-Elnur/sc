@@ -25,7 +25,7 @@ router.get('/m4', function(req, res, next) {
 });
 
 /* BMW M5 page */
-router.get('/m5', function(req, res, next) {
+router.get('/m54', function(req, res, next) {
   res.render("bmw", {
     title: "BMW M5",
     picture: "images/bmw_m5.jpg",
