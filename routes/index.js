@@ -1,12 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
+/*
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-/* BMW M3 page */
+/* BMW M3 page
 router.get('/m3', function(req, res, next) {
   res.render("bmw", {
     title: "BMW M3",
@@ -15,7 +18,7 @@ router.get('/m3', function(req, res, next) {
   });
 });
 
-/* BMW M4 page */
+/* BMW M4 page 
 router.get('/m4', function(req, res, next) {
   res.render("bmw", {
     title: "BMW M4",
@@ -24,7 +27,7 @@ router.get('/m4', function(req, res, next) {
   });
 });
 
-/* BMW M5 page */
+/* BMW M5 page 
 router.get('/m54', function(req, res, next) {
   res.render("bmw", {
     title: "BMW M5",
@@ -32,4 +35,11 @@ router.get('/m54', function(req, res, next) {
     desc:"Спортивный седан бизнес-класса, построенный на базе 5-й серии BMW. Отличается высокой мощностью (до 635 л.с. в версиях Competition) и инновационными технологиями, включая полный привод xDrive. Балансирует между комфортом и трековыми характеристиками."
   });
 });
+*/
+
+
+
 module.exports = router
+
+
+/*спросить что за фигня тут произошла*/
