@@ -8,6 +8,9 @@ var mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost/car')
 
 var session = require("express-session")
+/*тут могла возникнуть ошибка пункт 9_3 стр 87*/
+var MongoStore = require('connect-mongo');
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -27,13 +30,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+/*тут могла возникнуть ошибка пункт 9_3 стр 87*/
+
 app.use(session({
-  secret: "ThreeCats",
-  cookie:{maxAge:60*1000},
-  proxy: true,
-  resave: true,
-  saveUninitialized: true
+secret: "ThreeCars",
+cookie:{maxAge:60*1000},
+proxy: true,
+resave: true,
+saveUninitialized: true,
+store: MongoStore.create({mongoUrl:
+'mongodb://localhost/car'})
 }))
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
