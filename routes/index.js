@@ -4,10 +4,16 @@ var router = express.Router();
 /*
 
 
-/* GET home page. */
+/* GET home page. 
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
-});
+});*/
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.cookie('greeting', 'Hi!!!').render('index', { title:
+  'Express' });
+  });
 
 /* BMW M3 page
 router.get('/m3', function(req, res, next) {
