@@ -15,11 +15,18 @@ router.get('/', function(req, res, next) {
   'Express' });
   });*/
 
-/* GET home page. */
+/* GET home page. 9_3
 router.get('/', function(req, res, next) {
   req.session.greeting = "Hi!!!";
   res.render('index', { title: 'Express' });
+});*/
+
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express', counter:req.session.counter });
 });
+  
   
 
 /* BMW M3 page

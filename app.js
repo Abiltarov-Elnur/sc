@@ -12,6 +12,7 @@ var session = require("express-session")
 var MongoStore = require('connect-mongo');
 
 
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var cars = require('./routes/cars');
@@ -42,6 +43,11 @@ store: MongoStore.create({mongoUrl:
 'mongodb://localhost/car'})
 }))
 
+app.use(function(req,res,next){
+  req.session.counter = req.session.counter + 1 || 1
+  next()
+})
+  
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
