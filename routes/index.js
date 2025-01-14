@@ -1,27 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-/*
-
-
-/* GET home page. 
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});*/
-
-/* GET home page. 9_2
-router.get('/', function(req, res, next) {
-  res.cookie('greeting', 'Hi!!!').render('index', { title:
-  'Express' });
-  });*/
-
-/* GET home page. 9_3
-router.get('/', function(req, res, next) {
-  req.session.greeting = "Hi!!!";
-  res.render('index', { title: 'Express' });
-});*/
-
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express', counter:req.session.counter });
@@ -31,6 +10,20 @@ router.get('/', function(req, res, next) {
 router.get('/logreg', function(req, res, next) {
   res.render('logreg',{title: 'Вход'});
 });
+
+/* POST login/registration page. */
+router.post('/logreg', function(req, res, next) {
+});
+
+/* POST login/registration page. */
+router.post('/logreg', function(req, res, next) {
+  var username = req.body.username
+  var password = req.body.password
+  console.log(username);
+  console.log(password);
+  });
+
+module.exports = router
 
 /* BMW M3 page
 router.get('/m3', function(req, res, next) {
@@ -62,7 +55,6 @@ router.get('/m54', function(req, res, next) {
 
 
 
-module.exports = router
 
 
 /*спросить что за фигня тут произошла*/
